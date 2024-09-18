@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+/* Navigation Bar */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 9%;
+    background-color: #ffffff; /* White background */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+    z-index: 1000; /* Ensure navbar is above other content */
+}
+
+.navbar .back-arrow a {
+    font-size: 24px;
+    text-decoration: none;
+    color: #007bff; /* Blue color for arrow */
+}
+
+.navbar .page-title {
+    font-size: 28px;
+    color: #000; /* Black color for title */
+    margin-right:30% ;
+}
+
+/* Hero Section */
+.hero-section {
+    margin-top: 0px; /* Adjust for navbar height */
+    height: calc(100vh - 60px); /* Full viewport height minus navbar */
+    background: url('websitebackground.jpg') no-repeat center center/cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    padding: 0;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 95%;
+    background: rgba(0, 0, 0, 0.5); /* Transparent overlay */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding-left: 10%;
+    padding-right: 10%;
+}
+
+.description {
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.cta-buttons {
+    margin-top: 100px;
+}
+
+.cta-buttons .btn {
+    padding: 15px 30px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-buttons .btn-primary {
+    background-color: #007bff; /* Blue background */
+}
+
+.cta-buttons .btn-secondary {
+    background-color: #6c757d; /* Gray background */
+}
+
+.cta-buttons .btn-primary:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.cta-buttons .btn-secondary:hover {
+    background-color: #5a6268; /* Darker gray on hover */
+}
+
+.cta-buttons .btn:active {
+    transform: scale(0.95); /* Button press effect */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: white; /* Blue background */
+    color: blue;
+    padding: 20px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar .page-title {
+        font-size: 20px;
+    }
+
+    .hero-content {
+        padding: 20px;
+    }
+
+    .cta-buttons .btn {
+        display: block;
+        width: 100%;
+        margin: 10px 0;
+    }
+}

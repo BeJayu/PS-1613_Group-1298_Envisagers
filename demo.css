@@ -1,0 +1,175 @@
+/* General Styles for Desktop */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: white;
+    color: #090368;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* For better handling on small screens */
+}
+
+.navbar h1 {
+    margin: 0;
+    font-size: 24px;
+    text-align: center;
+    flex-grow: 1; /* Center the title on smaller screens */
+}
+
+.back-arrow {
+    text-decoration: none;
+    color:#090368;
+    font-size: 24px;
+}
+
+.main-content {
+    background-image: url('websitebackground.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensures full-screen height */
+    padding: 20px;
+}
+
+.form-container {
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent background for form */
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 650px;
+    margin: auto;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Add subtle shadow */
+}
+
+/* Self-Appraisal Parameters Styling */
+.parameter {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="file"] {
+    width: 95%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.verify-btn {
+    background-color: #0044cc;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.verify-btn:hover {
+    background-color: #003399;
+}
+
+/* Button Group for Predict and Suggestions */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.predict-btn, .suggestion-btn {
+    background-color: #0044cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 48%; /* Width adjustment for better spacing on smaller screens */
+}
+
+.predict-btn:hover, .suggestion-btn:hover {
+    background-color: #003399;
+}
+
+/* Email Prediction Button */
+.email-prediction {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.email-btn {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.email-btn:hover {
+    background-color: #005f6b;
+}
+
+
+/* Footer */
+footer {
+    background-color: white;
+    color: #090368;
+    text-align: center;
+    padding: 10px;
+    position: bottom;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .form-container {
+        padding: 15px;
+        max-width: 90%;
+    }
+
+    .navbar h1 {
+        font-size: 20px;
+    }
+
+    .predict-btn, .suggestion-btn {
+        width: 100%; /* Stack buttons on top of each other */
+        margin-bottom: 10px;
+    }
+
+    .email-btn {
+        width: 100%;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], input[type="file"] {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column; /* Stack navigation items */
+    }
+
+    .navbar h1 {
+        font-size: 18px;
+    }
+
+    .predict-btn, .suggestion-btn {
+        padding: 8px;
+    }
+
+    .email-btn {
+        padding: 8px;
+    }
+}
